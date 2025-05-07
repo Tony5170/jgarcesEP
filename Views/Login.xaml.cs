@@ -16,19 +16,25 @@ namespace jgarcesEP.Views
 
         private void btnacercade_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Acerca de", " Aplicación creada por: \n Jorge Antonio Garcés Zambrano \n Desarrollo de Aplicaciones móviles \n Paralelo: A", "OK");
+            DisplayAlert("Acerca de", " AplicaciÃ³n creada por: \n Jorge Antonio GarcÃ©s Zambrano \n Desarrollo de Aplicaciones mÃ³viles \n Paralelo: A", "OK");
         }
 
         private void btnIniciarSesion_Clicked(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasena.Text))
+            {
+                DisplayAlert("Alerta", "Por favor llene todos los campos", "OK");
+                return;
+            }
+        
             if (usuarios.ContainsKey(txtUsuario.Text) && usuarios[txtUsuario.Text] == txtContrasena.Text)
             {
                 Navigation.PushAsync(new Views.Registro(txtUsuario.Text));
             }
             else
             {
-                DisplayAlert("Alerta", "Usuario o contraseña incorrectos", "OK");
+                DisplayAlert("Alerta", "Usuario o contraseÃ±a incorrectos", "OK");
             }
         }
-    }
+    }   
 }
