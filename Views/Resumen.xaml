@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jgarcesEP.Views.Resumen"
+             Title="Resumen">
+    <VerticalStackLayout Padding="25" Spacing="20">
+        <Label x:Name="lblUsuario"
+           FontSize="16"
+           TextColor="red"
+           HorizontalTextAlignment="End"/>
+        <Label 
+            Text="RESUMEN"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="20"/>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Style="{StaticResource estiloLabel}"
+                Text="Nombre"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Grid.Row="0"
+                Grid.Column="0"/>
+            <Label Style="{StaticResource estiloLabel}"
+                x:Name="txtNombre"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Grid.Row="0"
+                Grid.Column="1"/>
+            
+            <Label Style="{StaticResource estiloLabel}"
+           Text="Apellido"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="1"
+           Grid.Column="0"/>
+            <Label Style="{StaticResource estiloLabel}"
+           x:Name="txtApellido"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="1"
+           Grid.Column="1"/>
+
+            <Label Style="{StaticResource estiloLabel}"
+           Text="VA"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="2"
+           Grid.Column="0"/>
+            <Label Style="{StaticResource estiloLabel}"
+           x:Name="txtVA"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="2"
+           Grid.Column="1"/>
+
+            <Label Style="{StaticResource estiloLabel}"
+           Text="Fecha"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="3"
+           Grid.Column="0"/>
+            <Label Style="{StaticResource estiloLabel}"
+           x:Name="txtFecha"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="3"
+           Grid.Column="1"/>
+
+            <Label Style="{StaticResource estiloLabel}"
+           Text="Ciudad"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="4"
+           Grid.Column="0"/>
+            <Label Style="{StaticResource estiloLabel}"
+           x:Name="txtCiudad"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="4"
+           Grid.Column="1"/>
+
+            <Label Style="{StaticResource estiloLabel}"
+           Text="Monto Inicial"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="5"
+           Grid.Column="0"/>
+            <Label Style="{StaticResource estiloLabel}"
+           x:Name="txtMontoInicial"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="5"
+           Grid.Column="1"/>
+
+            <Label Style="{StaticResource estiloLabel}"
+           Text="Cuota Mensual"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="6"
+           Grid.Column="0"/>
+            <Label Style="{StaticResource estiloLabel}"
+           x:Name="txtCuotaMensual"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="6"
+           Grid.Column="1"/>
+
+            <Label Style="{StaticResource estiloLabel}"
+           Text="Pago Total"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="7"
+           Grid.Column="0"/>
+            <Label Style="{StaticResource estiloLabel}"
+           x:Name="txtPagoTotal"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="7"
+           Grid.Column="1"/>
+        </Grid>
+
+        <Button Style="{StaticResource estiloButton}"
+            x:Name="btnCerrarSesion"
+            Text="Volver"
+            Clicked="btnCerrarSesion_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

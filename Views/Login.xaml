@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jgarcesEP.Views.Login"
+             Title="Login">
+    <VerticalStackLayout Padding="25" Spacing="20">
+        <Image Source="logo.png"
+               WidthRequest="150"/>
+        <Label 
+            Text="Sbs Consulting"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="20"
+            TextColor="Red"/>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Style="{StaticResource estiloLabel}"
+           Text="USUARIO"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="0"
+           Grid.Column="0"/>
+
+            <Entry Style="{StaticResource estiloEntry}"
+           x:Name="txtUsuario"
+           Placeholder="Ingrese su usuario"
+           Grid.Row="0"
+           Grid.Column="1"/>
+
+            <Label Style="{StaticResource estiloLabel}"
+           Text="CONTRASEÑA"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           Grid.Row="1"
+           Grid.Column="0"/>
+
+            <Entry Style="{StaticResource estiloEntry}"
+           x:Name="txtContrasena"
+           Placeholder="Ingrese su contraseña"
+           Grid.Row="1"
+           Grid.Column="1"/>
+
+        </Grid>
+        <Button Style="{StaticResource estiloButton}"
+        x:Name="btnIniciarSesion"
+        Text="Iniciar Sesion"
+        Clicked="btnIniciarSesion_Clicked"/>
+
+        <Button Style="{StaticResource estiloButton}"
+        x:Name="btnacercade"
+        Text="Acerca de"
+        Clicked="btnacercade_Clicked"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

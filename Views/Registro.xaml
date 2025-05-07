@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jgarcesEP.Views.Registro"
+             Title="Registro">
+    <VerticalStackLayout Padding="25" Spacing="20">
+        <Label x:Name="lblUsuario"
+               FontSize="16"
+               TextColor="red"
+               HorizontalTextAlignment="End"/>
+        <Label 
+            Text="REGISTRO"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="22"
+            TextColor="Blue"/>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Style="{StaticResource estiloLabel}"
+                Text="Nombre"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Grid.Row="0"
+                Grid.Column="0"/>
+            <Entry Style="{StaticResource estiloEntry}"
+                x:Name="txtNombre"
+                Placeholder="Ingresar nombre"
+                Grid.Row="1"
+                Grid.Column="0"/>
+
+            <Label Style="{StaticResource estiloLabel}"
+                Text="Apellido"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Grid.Row="0"
+                Grid.Column="1"/>
+            <Entry Style="{StaticResource estiloEntry}"
+                x:Name="txtApellido"
+                Placeholder="Ingresar nombre"
+                Grid.Row="1"
+                Grid.Column="1"/>
+
+            <Label Style="{StaticResource estiloLabel}"
+                   Text="Voltiamperio VA"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="0"
+                   Grid.Column="2"/>   
+            <Picker
+                x:Name="pkVA"
+                Title="Seleccione el Voltiamperio"
+                Grid.Row="1"
+                Grid.Column="2">   
+                <Picker.Items>
+                    <x:String>500</x:String>
+                    <x:String>750</x:String>
+                    <x:String>1000</x:String>
+                </Picker.Items>
+            </Picker>   
+        </Grid>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Style="{StaticResource estiloLabel}"
+                Text="Fecha"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Grid.Row="0"
+                Grid.Column="0"/>
+            <DatePicker
+                x:Name="pkfecha"
+                Format="dd/MM/yyyy"
+                Grid.Row="0"
+                Grid.Column="1"/>
+
+            <Label Style="{StaticResource estiloLabel}"
+                Text="Ciudad"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Grid.Row="1"
+                Grid.Column="0"/>
+            <Picker
+                x:Name="pkCiudad"
+                Title="Seleccione la ciudad"
+                Grid.Row="1"
+                Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Quito</x:String>
+                    <x:String>Guayaquil</x:String>
+                    <x:String>Cuenca</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Style="{StaticResource estiloLabel}"
+                Text="Monto Inicial"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Grid.Row="2"
+                Grid.Column="0"/>
+            <Entry Style="{StaticResource estiloEntry}"
+                x:Name="txtMontoIncial"
+                Placeholder="Ingrese el monto inicial"
+                Grid.Row="2"
+                Grid.Column="1"/>
+
+            <Button Style="{StaticResource estiloButton}"
+                x:Name="btnPagoMensual"
+                Text="Calcular Pago Mensual"
+                Clicked="btnPagoMensual_Clicked"
+                Grid.Row="3"
+                Grid.Column="0"/>
+            <Entry Style="{StaticResource estiloEntry}"
+                x:Name="txtcuotamensual"
+                IsReadOnly="True"
+                Grid.Row="3"
+                Grid.Column="1"/>
+        </Grid>
+        
+        <Button Style="{StaticResource estiloButton}"
+            x:Name="btnResumen"
+            Text="Ver Resumen"
+            Clicked="btnResumen_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
